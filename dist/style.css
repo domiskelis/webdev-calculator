@@ -1,0 +1,282 @@
+@import 'https://fonts.cdnfonts.com/css/ds-digital';
+@import 'https://fonts.cdnfonts.com/css/atkinson-hyperlegible-2';
+body {
+  background-color: #4d4d65;
+  opacity: 1;
+  background-image: linear-gradient(#16223e 3.8px, transparent 3.8px), linear-gradient(90deg, #16223e 3.8px, transparent 3.8px), linear-gradient(#16223e 1.9px, transparent 1.9px), linear-gradient(90deg, #16223e 1.9px, #4d4d65 1.9px);
+  background-size: 95px 95px, 95px 95px, 19px 19px, 19px 19px;
+  background-position: -3.8px -3.8px, -3.8px -3.8px, -1.9px -1.9px, -1.9px -1.9px;
+  min-height: 100vh;
+}
+
+.hidden {
+  font-size: 0px;
+}
+
+.container {
+  width: 20vw;
+  height: auto;
+  margin: 1vw auto auto auto;
+  padding: 1vw;
+  border: inset 3px rgba(34, 47, 78, 0.4);
+  background-color: #a8afc7;
+  font-size: 2vw;
+  box-shadow: 5px 5px 10px rgba(18, 21, 29, 0.9);
+}
+
+.number-display {
+  padding: 0 0.1em 0 0.1em;
+  margin: 0 2px;
+  background-color: #1c1b1b;
+  font-family: "DS-Digital", sans-serif;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(219, 255, 74, 0.5);
+  min-height: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+.display {
+  font-size: 1.4em;
+  text-align: right;
+  direction: ltr;
+  border-radius: 0 0 5px 5px;
+  border: inset 2px;
+  border-top: none;
+}
+
+.equation {
+  font-size: 1em;
+  direction: ltr;
+  border-radius: 5px 5px 0 0;
+  border: inset 2px;
+  border-bottom: none;
+}
+
+.numpad {
+  display: grid;
+  padding: 10px 0 0 0;
+  gap: 3px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "clear clear clear-entry undo" "percent sqrt multiply divide" "seven eight nine subtract" "four five six add" "one two three equals" "plus-minus zero decimal equals";
+}
+.numpad .numpad-button {
+  text-align: center;
+  font-size: 1em;
+  padding: 5px;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 600;
+  color: #e7e7e7;
+  border: outset 2px rgba(65, 71, 85, 0.4);
+  border-radius: 5px;
+  background-color: #262f36;
+  transition-duration: 0.2s;
+  aspect-ratio: 1;
+}
+.numpad button:hover {
+  background-color: #284b5e;
+  text-shadow: 1px 2px 0 black;
+  font-size: 1.2em;
+}
+
+#one {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#one:hover {
+  background-color: #417fa0;
+}
+
+#two {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#two:hover {
+  background-color: #417fa0;
+}
+
+#three {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#three:hover {
+  background-color: #417fa0;
+}
+
+#four {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#four:hover {
+  background-color: #417fa0;
+}
+
+#five {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#five:hover {
+  background-color: #417fa0;
+}
+
+#six {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#six:hover {
+  background-color: #417fa0;
+}
+
+#seven {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#seven:hover {
+  background-color: #417fa0;
+}
+
+#eight {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#eight:hover {
+  background-color: #417fa0;
+}
+
+#nine {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#nine:hover {
+  background-color: #417fa0;
+}
+
+#zero {
+  background-color: #496376;
+  border-color: rgba(61, 79, 129, 0.5);
+}
+
+#zero:hover {
+  background-color: #417fa0;
+}
+
+#clear {
+  border-color: rgba(112, 30, 30, 0.5);
+  background-color: #602727;
+  aspect-ratio: auto;
+}
+
+#clear:hover {
+  background-color: #913410;
+}
+
+#equals {
+  background-color: #486253;
+  aspect-ratio: auto;
+}
+
+#equals:hover {
+  background-color: #5f8152;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#add {
+  grid-area: add;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#percent {
+  grid-area: percent;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#clearEntry {
+  grid-area: clearEntry;
+}
+
+#undo {
+  grid-area: undo;
+}
+
+#plus-minus {
+  grid-area: plus-minus;
+}
+
+#sqrt {
+  grid-area: sqrt;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 90vw;
+    font-size: 9vw;
+  }
+}

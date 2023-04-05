@@ -1,0 +1,106 @@
+@import 'https://fonts.cdnfonts.com/css/ds-digital'
+@import 'https://fonts.cdnfonts.com/css/atkinson-hyperlegible-2'
+
+body
+  background-color: #4d4d65
+  opacity: 1
+  background-image:  linear-gradient(#16223e 3.8000000000000003px, transparent 3.8000000000000003px), linear-gradient(90deg, #16223e 3.8000000000000003px, transparent 3.8000000000000003px), linear-gradient(#16223e 1.9000000000000001px, transparent 1.9000000000000001px), linear-gradient(90deg, #16223e 1.9000000000000001px, #4d4d65 1.9000000000000001px)
+  background-size: 95px 95px, 95px 95px, 19px 19px, 19px 19px
+  background-position: -3.8000000000000003px -3.8000000000000003px, -3.8000000000000003px -3.8000000000000003px, -1.9000000000000001px -1.9000000000000001px, -1.9000000000000001px -1.9000000000000001px
+  min-height: 100vh
+
+//for fcc test, standard equal sign was changed to fa
+.hidden
+  font-size: 0px
+.container
+  width: 20vw
+  height: auto
+  margin: 1vw auto auto auto
+  padding: 1vw
+  border: inset 3px rgba(34, 47, 78, 0.4)
+  background-color: rgba(168, 175, 199, 1)
+  font-size: 2vw
+  box-shadow: 5px 5px 10px rgba(18, 21, 29, 0.9)
+
+.number-display
+  padding: 0 0.1em 0 0.1em
+  margin: 0 2px
+  background-color: rgba(28, 27, 27, 1)
+  font-family: 'DS-Digital', sans-serif
+  color: white
+  text-shadow: 1px 1px 2px rgba(219, 255, 74, 0.5)
+  min-height: 1em
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: clip
+
+.display
+  font-size: 1.4em
+  text-align: right
+  direction: ltr
+  border-radius: 0 0 5px 5px
+  border: inset 2px
+  border-top: none
+.equation 
+  font-size: 1em
+  direction: ltr
+  border-radius: 5px 5px 0 0
+  border: inset 2px
+  border-bottom: none
+
+.numpad 
+  display: grid
+  padding: 10px 0 0 0 
+  gap: 3px
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-template-rows: auto
+  grid-template-areas: "clear clear clear-entry undo" "percent sqrt multiply divide" "seven eight nine subtract" "four five six add" "one two three equals" "plus-minus zero decimal equals"
+  .numpad-button 
+    text-align: center
+    font-size: 1em
+    padding: 5px
+    font-family: 'Atkinson Hyperlegible', sans-serif
+    font-weight: 600
+    color: rgba(231, 231, 231, 1)
+    border: outset 2px rgba(65, 71, 85, 0.4)
+    border-radius: 5px
+    background-color: rgba(38, 47, 54, 1)
+    transition-duration: 0.2s
+    aspect-ratio: 1
+    
+  button:hover
+    background-color: rgba(40, 75, 94, 1)
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 1)
+    font-size: 1.2em
+    
+
+$numbers: "one", "two", "three", "four", "five",  "six", "seven", "eight", "nine", "zero"
+@each $name in $numbers
+  ##{$name}
+    background-color: rgba(73, 99, 118, 1)
+    border-color: rgba(61, 79, 129, 0.5)
+  ##{$name}:hover
+    background-color: rgba(65, 127, 160, 1)
+#clear
+  border-color: rgba(112, 30, 30, 0.5)
+  background-color: rgba(96, 39, 39, 1)
+  aspect-ratio: auto
+#clear:hover
+  background-color: rgba(145, 52, 16, 1)
+#equals
+  background-color: rgba(72, 98, 83, 1)
+  aspect-ratio: auto
+#equals:hover
+  background-color: rgba(95, 129, 82, 1)
+  
+  //Arrange numpad:
+$calcButtons: "one", "two", "three", "four", "five",  "six", "seven", "eight", "nine", "zero", "add",  "subtract", "multiply", "divide", "percent",  "clear",  "clearEntry", "undo", "plus-minus", "sqrt", "equals"
+@each $name in $calcButtons
+  ##{$name}
+    grid-area: #{$name}
+
+//Limited scaling for mobile screens
+@media (max-width:900px)
+  .container
+    width: 90vw
+    font-size: 9vw
