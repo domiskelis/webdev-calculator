@@ -25,9 +25,7 @@ const operators = ["*","/","+"];
 const defaultState = {
   equation: '', display: '0', input: '', decimal: false, justCalculated: false
 }
-//Troubleshooting todo:
-//-Override leading 0
-//-
+
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
